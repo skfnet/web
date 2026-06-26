@@ -20,6 +20,29 @@ const createBtn = document.getElementById("createRoom");
 const cameraNameInput = document.getElementById("cameraNameInput");
 const saveNameBtn = document.getElementById("saveNameBtn");
 const savedName = localStorage.getItem("globalCameraName");
+const copyRoomCodeBtn = document.getElementById("copyRoomCode");
+
+copyRoomCodeBtn.onclick = async () => {
+  const code = roomCodeEl.textContent;
+
+  if (code === "------") {
+    alert("Сначала создайте комнату");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(code);
+
+    copyRoomCodeBtn.textContent = "Скопировано!";
+
+    setTimeout(() => {
+      copyRoomCodeBtn.textContent = "";
+    }, 2000);
+
+  } catch (err) {
+    alert("Не удалось скопировать код");
+  }
+};
 
 if (savedName) {
   cameraNameInput.value = savedName;
