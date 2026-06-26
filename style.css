@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "FixedSys";
+    src: url("fixedsys.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.description{
+    font-size:1.1rem;
+    opacity:0.8;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+    max-width:350px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:12px;
+    font-size:1.1rem;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.camera-btn{
+    background:#2563eb;
+}
+
+.camera-btn:hover{
+    transform:scale(1.03);
+}
+
+.viewer-btn{
+    background:#16a34a;
+}
+
+.viewer-btn:hover{
+    transform:scale(1.03);
+}
+
+/* Камера и просмотр */
+
+.video-container{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    background:black;
+}
+
+.room-box{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.room-code{
+    font-size:2rem;
+    text-align:center;
+    background:#1e293b;
+    padding:15px;
+    border-radius:10px;
+    letter-spacing:3px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    outline:none;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:white;
+}
+
+.success-btn{
+    background:#16a34a;
+    color:white;
+}
+
+.status{
+    text-align:center;
+    margin-top:15px;
+    opacity:0.8;
+}
+
+.back-link{
+    display:inline-block;
+    margin-top:20px;
+    color:white;
+    text-decoration:none;
+}
+
+.video-wrapper{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    color:white;
+    font-size:35px;
+    padding:6px 10px;
+    border-radius:6px;
+    font-family: "FixedSys", monospace;
+}
+
+.top-left{
+    top:10px;
+    left:10px;
+}
+
+.bottom-left{
+    bottom:10px;
+    left:10px;
+}
+
+.top-right{
+    top:20px;
+    right:10px;
+    position:absolute;
+    color:white;
+    font-size:21px;
+}

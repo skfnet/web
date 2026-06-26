@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkoftaNet</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="video-container" style="position:relative;">
+
+    <h2><i class="material-icons">visibility</i>&nbsp;Просмотр камеры</h2>
+
+    <br>
+
+    <div class="video-wrapper" style="position:relative;">
+        
+        <video id="remoteVideo" autoplay playsinline></video>
+
+        <div id="timeOverlay" class="overlay top-left"></div>
+
+        <div id="nameOverlay" class="overlay bottom-left"></div>
+
+    </div>
+
+    <p id="statusOverlay" class="overlay top-right"></p>
+
+    <div class="room-box">
+        <input id="roomInput" placeholder="Введите код комнаты">
+        <button id="joinBtn" class="success-btn"><i class="material-icons">videocam</i>&nbsp;Подключиться</button>
+        <p class="status" id="status">Ожидание ввода кода...</p>
+    </div>
+
+    <a href="index.html" class="back-link"><i class="material-icons">logout</i>&nbsp;Выйти</a>
+
+</div>
+
+<script type="module" src="viewer.js"></script>
+
+</body>
+</html>
