@@ -181,3 +181,20 @@ button{
     color:white;
     font-size:21px;
 }
+
+.room-code-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+}
