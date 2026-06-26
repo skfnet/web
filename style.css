@@ -183,18 +183,19 @@ button{
 }
 
 .room-code-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items:center;
 }
 
 .copy-btn {
-  padding: 8px 12px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
+  padding:8px 12px;
+  cursor:pointer;
+  border:none;
+  border-radius:6px;
+  position:relative;
+  top:-56px;
+  left:13px;
 }
 
 .copy-btn:hover {
-  opacity: 0.9;
+  opacity:0.9;
 }
