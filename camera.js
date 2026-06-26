@@ -36,7 +36,7 @@ copyRoomCodeBtn.onclick = async () => {
     copyRoomCodeBtn.textContent = "Скопировано!";
 
     setTimeout(() => {
-      copyRoomCodeBtn.innerHTML = '<i style="color: black;" class="material-icons">copy</i>';
+      copyRoomCodeBtn.innerHTML = '<i style="color: black;" class="material-icons">content_copy</i>';
     }, 2000);
 
   } catch (err) {
