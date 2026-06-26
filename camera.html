@@ -18,8 +18,16 @@
 
     <video id="localVideo" autoplay playsinline muted></video>
 
-    <div class="room-box">
-        <div id="roomCode" class="room-code">------</div>
+<div class="room-box">
+    
+<div class="room-code-wrapper">
+  <div id="roomCode" class="room-code">------</div>
+
+  <button id="copyRoomCode" class="copy-btn">
+    <i class="material-icons">copy</i>
+  </button>
+</div>
+    
         <br>
         <button id="createRoom" class="primary-btn"><i class="material-icons">add</i>&nbsp;Создать комнату</button>
         <input id="cameraNameInput" placeholder="Название камеры">
