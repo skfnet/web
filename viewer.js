@@ -110,10 +110,17 @@ joinBtn.onclick = async () => {
 
   pc = new RTCPeerConnection(servers);
 
+  pc.oniceconnectionstatechange = () => {
+  console.log("ICE:", pc.iceConnectionState);
+};
+
   remoteStream = new MediaStream();
   remoteVideo.srcObject = remoteStream;
 
   pc.ontrack = (event) => {
+    console.log("Получен поток");
+    console.log(event.streams[0]);
+    
     event.streams[0].getTracks().forEach(track => {
       remoteStream.addTrack(track);
     });
