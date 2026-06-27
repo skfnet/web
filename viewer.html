@@ -12,7 +12,7 @@
 
 <div class="video-container" style="position:relative;">
 
-    <h2><i class="material-icons">visibility</i>&nbsp;Просмотр камеры</h2>
+    <h2 class="hide-in-fullscreen"><i class="material-icons">visibility</i>&nbsp;Просмотр камеры</h2>
 
     <br>
 
@@ -27,16 +27,20 @@
     </div>
 
     <p id="statusOverlay" class="overlay top-right"></p>
+    <br>
+    <button id="fullscreenBtn" class="success-btn">
+    <i class="material-icons">fullscreen</i>
+    </button>
 
-    <div class="room-box">
+    <div class="room-box hide-in-fullscreen">
         <input id="roomInput" type="number" placeholder="Введите код комнаты">
         <button id="joinBtn" class="success-btn"><i class="material-icons">videocam</i>&nbsp;Подключиться</button>
         <p class="status" id="status">Ожидание ввода кода...</p>
     </div>
 
-    <a href="index.html" class="back-link"><i class="material-icons">logout</i>&nbsp;Выйти</a>
+    <a href="index.html" class="back-link hide-in-fullscreen"><i class="material-icons">logout</i>&nbsp;Выйти</a>
     <br><br>
-    <center><p style="color: red;">Важно: Устройство, которое используется как камера, и устройство, на котором просматривается трансляция, должны быть подключены к одной и той же сети Wi-Fi. При подключении к разным сетям работа трансляции может быть нестабильной или недоступной.</p></center>
+    <center><p class="hide-in-fullscreen" style="color: red;">Важно: Устройство, которое используется как камера, и устройство, на котором просматривается трансляция, должны быть подключены к одной и той же сети Wi-Fi. При подключении к разным сетям работа трансляции может быть нестабильной или недоступной.</p></center>
 
 </div>
 
