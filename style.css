@@ -162,6 +162,7 @@ button{
     padding:6px 10px;
     border-radius:6px;
     font-family: "FixedSys", monospace;
+    -webkit-text-stroke: 0.6px black;
 }
 
 .top-left{
