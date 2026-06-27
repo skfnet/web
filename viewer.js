@@ -114,22 +114,13 @@ joinBtn.onclick = async () => {
   console.log("ICE:", pc.iceConnectionState);
 };
 
-  remoteStream = new MediaStream();
-  remoteVideo.srcObject = remoteStream;
-
   pc.ontrack = (event) => {
   console.log("Получен поток");
 
   console.log("Видео:", event.streams[0].getVideoTracks());
   console.log("Аудио:", event.streams[0].getAudioTracks());
 
-  event.streams[0].getTracks().forEach(track => {
-    console.log(track.kind, track.readyState);
-
-    remoteStream.addTrack(track);
-  });
-
-  remoteVideo.srcObject = remoteStream;
+  remoteVideo.srcObject = event.streams[0];
 
   remoteVideo.play().catch(console.error);
 };
