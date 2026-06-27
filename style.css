@@ -199,3 +199,26 @@ button{
 .copy-btn:hover {
   opacity:0.9;
 }
+
+.fullscreen-mode .hide-in-fullscreen {
+  display: none !important;
+}
+
+#fullscreenBtn {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.fullscreen-mode #fullscreenBtn {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+  padding: 6px 10px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.fullscreen-mode #fullscreenBtn:hover {
+  opacity: 1;
+}
