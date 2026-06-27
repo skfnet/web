@@ -60,6 +60,9 @@ async function startMedia() {
   });
 
   localVideo.srcObject = localStream;
+
+  console.log(localStream.getVideoTracks()[0].getSettings());
+  console.log(localStream.getAudioTracks()[0].getSettings());
 }
 
 // 🧠 генерация ID
