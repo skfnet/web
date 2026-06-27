@@ -22,6 +22,36 @@ const statusEl = document.getElementById("status");
 const timeOverlay = document.getElementById("timeOverlay");
 const nameOverlay = document.getElementById("nameOverlay");
 const statusOverlay = document.getElementById("statusOverlay");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+fullscreenBtn.onclick = async () => {
+  try {
+    if (!document.fullscreenElement) {
+      document.body.classList.add("fullscreen-mode");
+      await document.body.requestFullscreen();
+
+      fullscreenBtn.innerHTML =
+        '<i class="material-icons">fullscreen_exit</i>';
+    } else {
+      document.body.classList.remove("fullscreen-mode");
+      await document.exitFullscreen();
+
+      fullscreenBtn.innerHTML =
+        '<i class="material-icons">fullscreen</i>';
+    }
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    document.body.classList.remove("fullscreen-mode");
+
+    fullscreenBtn.innerHTML =
+      '<i class="material-icons">fullscreen</i>';
+  }
+});
 
 let pc;
 let roomId;
