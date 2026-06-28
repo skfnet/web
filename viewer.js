@@ -115,14 +115,15 @@ joinBtn.onclick = async () => {
 };
 
   pc.ontrack = (event) => {
-  console.log("Получен поток");
 
-  console.log("Видео:", event.streams[0].getVideoTracks());
-  console.log("Аудио:", event.streams[0].getAudioTracks());
+    if (remoteVideo.srcObject) return;
 
-  remoteVideo.srcObject = event.streams[0];
+    console.log("Получен поток");
 
-  remoteVideo.play().catch(console.error);
+    remoteVideo.srcObject = event.streams[0];
+
+    remoteVideo.play().catch(console.error);
+
 };
 
   pc.onicecandidate = (event) => {
