@@ -55,9 +55,13 @@ let roomId;
 // 🎥 включение камеры
 async function startMedia() {
   localStream = await navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
-  });
+  video: {
+    width: { ideal: 640 },
+    height: { ideal: 480 },
+    frameRate: { ideal: 30, max: 30 }
+  },
+  audio: true
+});
 
   localVideo.srcObject = localStream;
 
