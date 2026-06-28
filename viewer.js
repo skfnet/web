@@ -24,6 +24,12 @@ const nameOverlay = document.getElementById("nameOverlay");
 const statusOverlay = document.getElementById("statusOverlay");
 const fullscreenBtn = document.getElementById("fullscreenBtn");
 
+roomInput.addEventListener("input", () => {
+  roomInput.value = roomInput.value
+    .replace(/\D/g, "")
+    .slice(0, 6);
+});
+
 fullscreenBtn.onclick = async () => {
   try {
     if (!document.fullscreenElement) {
