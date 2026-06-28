@@ -55,7 +55,6 @@ document.addEventListener("fullscreenchange", () => {
 
 let pc;
 let roomId;
-let remoteStream;
 
 // ⏱ формат времени
 function formatDateTime() {
